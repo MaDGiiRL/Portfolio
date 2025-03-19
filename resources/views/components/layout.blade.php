@@ -18,30 +18,14 @@
 
     <!-- Custom -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <style>
-        body {
-            cursor: none;
-            /* Nasconde il cursore predefinito */
-        }
-
-        .cursor {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #ff0000;
-            pointer-events: none;
-            /* Evita che l'elemento interagisca con altre cose */
-            transition: transform 0.1s ease-out;
-        }
-    </style>
 
 </head>
 
 <body>
-    <div class="cursor" style="z-index: 999999;"></div>
-    <x-navbar />
 
+    <x-navbar />
+    
+    <div class="cursor"></div>
 
     <div class="min-vh-100">
         {{$slot}}
@@ -50,14 +34,7 @@
     <x-footer />
 
     <script type="module" src="script.js"></script>
-<script>
-    const cursor = document.querySelector('.cursor');
 
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = `${e.pageX - cursor.offsetWidth / 2}px`;
-  cursor.style.top = `${e.pageY - cursor.offsetHeight / 2}px`;
-});
-</script>
 </body>
 
 </html>

@@ -437,6 +437,7 @@ canvas {
 }
 
 
+/*Panels*/
 
 .content {
     display: none;
@@ -489,7 +490,6 @@ canvas {
 /*Contact*/
 .connect {
     background: url(/public/01.png);
-    box-shadow: 0 0 8px #dbff00;
     background-size: cover;
     color: white;
 }
