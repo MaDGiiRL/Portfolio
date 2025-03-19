@@ -23,8 +23,16 @@
 
 <body>
 
+
+    @if (session('status'))
+    <div class="alert alert-success" style="z-index: 99999999">
+        {{ session('status') }}
+    </div>
+    @endif
+
     <x-navbar />
-    
+
+
     <div class="cursor"></div>
 
     <div class="min-vh-100">

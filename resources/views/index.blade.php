@@ -1,76 +1,11 @@
-<x-layout title="Sofia Vidotto">
+<x-layout title="Who's Sofia?">
 
     <x-hero />
 
     <x-summary />
-    <!-- Projects -->
-    <section class="flex-col-wise py-5 my-5">
-        <div class="container flex-col-wise mb-5">
-            <div class="projectContainer row g-3">
-                <div class="col-lg-12 col-12">
-                    <h2 class="text-white text-left mt-5 display-5 text-uppercase">Projects</h2>
-                </div>
-                <div class="projectItem col-lg-8 col-12">
-                    <div class="card item1">
-                        <div class="image-container">
-                            <img src="/1.png" alt="Project 1">
-                            <div class="buttons">
-                                <button>View</button>
-                                <button>Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="projectItem col-lg-4 col-6">
-                    <div class="card item2">
-                        <div class="image-container">
-                            <img src="/2.png" alt="Project 2">
-                            <div class="buttons">
-                                <button>View</button>
-                                <button>Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="projectItem col-lg-4 col-6">
-                    <div class="card item3">
-                        <div class="image-container">
-                            <img src="/3.png" alt="Project 3">
-                            <div class="buttons">
-                                <button>View</button>
-                                <button>Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="projectItem col-lg-4 col-6">
-                    <div class="card item4">
-                        <div class="image-container">
-                            <img src="/4.png" alt="Project 4">
-                            <div class="buttons">
-                                <button>View</button>
-                                <button>Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="projectItem col-lg-4 col-6">
-                    <div class="card item5">
-                        <div class="image-container">
-                            <img src="/5.png" alt="Project 5">
-                            <div class="buttons">
-                                <button>View</button>
-                                <button>Details</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
+    <x-project />
 
-    <!-- Experience -->
     <x-experience />
 
 
@@ -101,9 +36,43 @@
 
 
 
-
     <!-- Contact -->
-    <x-contact />
+    <section class="connect flex-col-wise p-5">
+        <div class="container">
+            <div class="row d-flex align-items-between">
+                <div class="col-lg-6 col-12 connectMessage d-flex flex-column pt-5 ">
+                    <h3 class="text-end ">Contact Me <i class="bi bi-arrow-right-circle p-2"></i></h3>
+                    <p>Che tu abbia una domanda, un feedback o semplicemente voglia dire ciao, sentiti libero di contattarmi.</p>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <p class="titleFont mx-2 my-2">🌈 Mandami un Messaggio!</p>
+                    <div class="row gap-2 contactForm">
+                        <form method="POST" action="{{route('index_submit')}}">
+                            @csrf
+                            <div class="contactForm mb-2">
+                                <input name="name" id="nName" type="text" placeholder="Nome">
+                                @error('name') <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                            <div class="mb-2">
+                                <input name="email" id="email" type="text" placeholder="Email">
+                                @error('email') <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                            <div class="col-12">
+                                <textarea name="user_message" placeholder="Messaggio" id="user_message" rows="6" cols="50"></textarea>
+                                @error('user_message') <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+                            <div class="mb-2 fs-5">
+                                <button type="submit">
+                                    Invia <i class="bi bi-arrow-up-right-square"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
 
     <script>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Mail\ContactFormMail;
+use Illuminate\Support\Facades\Mail;
 
 class PublicController extends Controller
 {
@@ -30,5 +32,20 @@ class PublicController extends Controller
     {
         $skills = collect($this->skills);
         return view('index', ['skills' => $skills]);
+    }
+
+
+
+    public function index_submit(Request $request)
+    {
+        $name = $request->name;
+        $email = $request->email;
+        $user_message = $request->user_message;
+
+        $user_data = compact('name', 'email', 'user_message');
+
+        Mail::to($email)->send(new ContactFormMail($user_data));
+
+        return redirect(route('index'))->with('status', 'Messaggio inviato!');
     }
 }
