@@ -402,10 +402,88 @@ canvas {
 }
 
 .card {
-    background-color: rgb(19, 19, 19);
+    background: transparent;
+    border: none;
     height: 100%;
     border-radius: 10px;
     margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .image-container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+}
+
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: opacity 0.3s ease-in-out;
+    
+}
+
+.buttons button {
+    padding: 8px 12px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.buttons button:hover {
+    background-color: rgba(0, 0, 0);
+}
+
+.card:hover img {
+    filter: blur(5px);
+}
+
+.card:hover .buttons {
+    opacity: 1;
+}
+
+/* Specific styles for each item with background images */
+.item1 {
+    background-image: url('/public/1.png');
+    background-size: cover;
+}
+
+.item2 {
+    background-image: url('/public/2.png');
+    background-size: cover;
+}
+
+.item3 {
+    background-image: url('/public/3.png');
+    background-size: cover;
+}
+
+.item4 {
+    background-image: url('/public/4.png');
+    background-size: cover;
+}
+
+.item5 {
+    background-image: url('/public/5.png');
+    background-size: cover;
 }
 
 
@@ -548,11 +626,15 @@ canvas {
     color: white;
 }
 
-.connect h3{
-    font-family:"Lemon";
+.connect h3 {
+    font-family: "Lemon";
     font-size: 100px;
-    color: transparent;
-    -webkit-text-stroke: 1px white;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(rgb(165, 233, 39) 23%, #ff36a3 91%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 3px transparent;
+    color: #272526;
+
 }
 
 /*Footer*/

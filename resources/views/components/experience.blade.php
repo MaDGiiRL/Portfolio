@@ -1,7 +1,7 @@
 <section class="experienceSection flex-col-wise my-5 py-5">
     <div class="container d-flex flex-column justify-content-center">
         <div>
-            <h2 class="text-white text-left mt-5 display-5 text-uppercase">Work Experience</h2>
+            <h2 class="text-white text-left display-5 text-uppercase">My Experience</h2>
         </div>
         <div class="experience ">
             <div class="experienceCard row">

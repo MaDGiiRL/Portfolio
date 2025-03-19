@@ -1,9 +1,9 @@
 <section class="connect flex-col-wise p-5">
     <div class="container">
         <div class="row d-flex align-items-between">
-            <div class="col-lg-6 col-12 connectMessage d-flex flex-column  ">
+            <div class="col-lg-6 col-12 connectMessage d-flex flex-column pt-5 ">
 
-                <h3>Contact Me</h3>
+                <h3 class="text-end ">Contact Me <i class="bi bi-arrow-right-circle p-2"></i></h3>
 
                 <p>Che tu abbia una domanda, un feedback o semplicemente voglia dire ciao, sentiti libero di contattarmi.</p>
             </div>
@@ -11,21 +11,20 @@
                 <p class="titleFont mx-2 my-2">🌈 Mandami un Messaggio!</p>
                 <div class="row gap-2 contactForm">
 
-                    <div class="contactForm col-12 ">
-                        <input name="Name" id="Name" type="text" placeholder="Nome">
-                    </div>
-                    <div class="col-12 ">
-                        <input name="Email" id="Email" type="text" placeholder="Email">
-                    </div>
-                    <div class="col-12">
-                        <input type="text" name="Subject" id="Subject" placeholder="Soggetto">
-                    </div>
-                    <div class="col-12">
-                        <textarea name="Message" placeholder="Messaggio" id="Message" rows="6" cols="50"></textarea>
-                    </div>
-                    <div class="col-12 fs-5">
-                        <button type="button" id="">Invia <i class="bi bi-arrow-up-right-square"></i></button>
-                    </div>
+                    <form action="">
+                        <div class="contactForm mb-2">
+                            <input name="Name" id="Name" type="text" placeholder="Nome">
+                        </div>
+                        <div class="mb-2">
+                            <input name="Email" id="Email" type="text" placeholder="Email">
+                        </div>
+                        <div class="col-12">
+                            <textarea name="Message" placeholder="Messaggio" id="Message" rows="6" cols="50"></textarea>
+                        </div>
+                        <div class="mb-2fs-5">
+                            <button type="button" id="">Invia <i class="bi bi-arrow-up-right-square"></i></button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
