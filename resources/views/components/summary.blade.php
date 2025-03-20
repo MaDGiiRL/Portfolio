@@ -5,7 +5,7 @@
             <p id="subtitleWord" class="small text-uppercase text-pink fw-bold">Junior Web Developer</p>
             <div class="normalFont mt-2">
                 <div id="paragraphLines" class="lead text-white text-justify">
-                    Ciao! Sono Sofia, una junior web developer full stack con una grande passione per il codice, i videogiochi e, soprattutto, la mia famiglia. Ogni giorno bilancio la mia vita tra lo sviluppo di applicazioni web, il gaming e il meraviglioso ruolo di mamma. Amo creare esperienze digitali intuitive e coinvolgenti utilizzando Laravel, Livewire, PHP, HTML, CSS e JavaScript. Per me, programmare è come giocare a un puzzle: ogni riga di codice è un pezzo che porta alla soluzione perfetta. Che si tratti di costruire un sito web o superare un livello difficile in un gioco, la mia determinazione non si ferma mai!
+                    Ciao! Sono Sofia, una junior web developer full stack con una grande passione per il codice e i videogiochi. Amo creare esperienze digitali intuitive e coinvolgenti. Per me, programmare è come giocare a un puzzle: ogni riga di codice è un pezzo che porta alla soluzione perfetta. Che si tratti di costruire un sito web o superare un livello difficile in un gioco, la mia determinazione non si ferma mai!
                 </div>
             </div>
         </div>
