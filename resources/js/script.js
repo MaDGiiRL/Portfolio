@@ -56,7 +56,7 @@ const updateContent = () => {
   elementsToAnimate.forEach(el => el.classList.add("fade-out"));
 
   setTimeout(() => {
-    circles[clickCount % summaryData.length].style.border = "1px solid #dbff00";
+    circles[clickCount % summaryData.length].style.border = "1px solid";
 
     // Batch content updates
     Object.assign(elements.heading, { innerHTML: data.innterText });
